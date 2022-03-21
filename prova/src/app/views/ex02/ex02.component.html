@@ -1,0 +1,23 @@
+<hr><br>
+
+<h3>Prova Exercicio 02</h3>
+
+<button (click)="img='img1'">Brasil</button>
+<button (click)="img='img2'">Canada</button>
+<button (click)="img='img3'">Eua</button>
+<button (click)="img='img4'">Suecia</button>
+
+<div [ngSwitch]="img">
+  <div *ngSwitchCase="'img1'">
+    <img src="assets/Brasil.png">
+  </div>
+  <div *ngSwitchCase="'img2'">
+    <img src="assets/Canada.png">
+  </div>
+  <div *ngSwitchCase="'img3'">
+    <img src="assets/Eua.png">
+  </div>
+  <div *ngSwitchCase="'img4'">
+    <img src="assets/Suecia.png">
+  </div>
+</div>

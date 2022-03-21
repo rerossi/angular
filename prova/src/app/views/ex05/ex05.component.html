@@ -1,0 +1,37 @@
+<hr><br>
+
+<h3>Prova Exercicio 05</h3>
+
+<input type="number" [(ngModel)]="valor1" placeholder="valor1" >
+<input type="number" [(ngModel)]="valor2" placeholder="valor2">
+
+
+{{resultado}}
+
+
+<br>
+
+<input type="radio"  value="+" id="adicao" [(ngModel)]="calc" (click)="soma()">
+<label for="adicao">adição</label>
+
+<input type="radio" value="-" id="subtracao" [(ngModel)]="calc" (click)="subtrai()">
+<label for="subtracao">subtração</label>
+
+<input type="radio" value="/" id="divisao" [(ngModel)]="calc" (click)="dividi()">
+<label for="divisao">divisão</label>
+
+<input type="radio" value="x" id="multiplicacao" [(ngModel)]="calc" (click)="multiplica()">
+<label for="multiplicacao">multiplicação</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
