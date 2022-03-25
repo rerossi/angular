@@ -1,0 +1,47 @@
+
+<h3>Gestor de jogos</h3>
+
+<table border="1">
+
+  <thead>
+    <tr>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Plataforma</th>
+    <th>Num Jogadores</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let game of games; let i = index" (click)="selectGame(game)">
+    <td>{{game.name}}</td>
+    <td>{{game.desc}}</td>
+    <td>{{game.plataforma}}</td>
+    <td>{{game.numJog}}</td>
+    <td><button (click)="remove(i)">x</button></td>
+
+  </tr>
+
+
+
+  </tbody>
+
+
+  </table>
+
+<div class="mx-2" *ngIf="curGame">
+  <input placeholder="Name" [(ngModel)]="curGame.name">
+  <br>
+  <input placeholder="Desc" [(ngModel)]="curGame.desc">
+  <br>
+  <input placeholder="Plataforma" [(ngModel)]="curGame.plataforma">
+  <br>
+  <input placeholder="NumJog" [(ngModel)]="curGame.numJog">
+  <button (click)="save()">Save</button>
+  <button (click)="cancel()">Cancel</button>
+</div>
+
+<div class="mx-2">
+  <button (click)="newGame()">New</button>
+</div>
+
