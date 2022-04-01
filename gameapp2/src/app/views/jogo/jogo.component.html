@@ -1,0 +1,45 @@
+<h2>Gestor de Jogos</h2>
+
+<table border="1" >
+
+  <tr>
+    <th>Nome do Jogo</th>
+    <th>Status</th>
+  </tr>
+
+  <tr *ngFor="let jogo of jogos" >
+
+    <td>{{jogo.nome}}</td>
+    <td>{{jogo.status}}</td>
+
+  </tr>
+
+</table>
+
+<div *ngIf="jogoAtual">
+
+  <input [(ngModel)]="jogoAtual.nome">
+
+  <select [(ngModel)]="jogoAtual.status">
+    <option value="na">Não informado</option>
+    <option value="q">quero</option>
+    <option value="t">tenho</option>
+    <option value="j">jogando</option>
+    <option value="z">zerado</option>
+
+  </select>
+
+  <br><br>
+
+  <input placeholder="genero" [(ngModel)]="jogoAtual.genero">
+  <br><br>
+  <input placeholder="plataforma" [(ngModel)]="jogoAtual.plataforma">
+
+  <br><br>
+
+  <button (click)="salvar()">Salvar</button>
+  <button (click)="cancelar()">Cancelar</button>
+
+</div>
+
+<button (click)="novo()">Novo Jogo</button>
