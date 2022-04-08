@@ -5,12 +5,17 @@
   <tr>
     <th>Nome do Jogo</th>
     <th>Status</th>
+    <th>Ações</th>
   </tr>
 
   <tr *ngFor="let jogo of jogos" >
 
     <td>{{jogo.nome}}</td>
     <td>{{jogo.status}}</td>
+    <td>
+      <button (click)="selecionar(jogo)">editar</button>
+      <button (click)="remover(jogo.id)">excluir</button>
+    </td>
 
   </tr>
 
@@ -22,10 +27,10 @@
 
   <select [(ngModel)]="jogoAtual.status">
     <option value="na">Não informado</option>
-    <option value="q">quero</option>
-    <option value="t">tenho</option>
-    <option value="j">jogando</option>
-    <option value="z">zerado</option>
+    <option value="quero">quero</option>
+    <option value="tenho">tenho</option>
+    <option value="jogando">jogando</option>
+    <option value="zerado">zerado</option>
 
   </select>
 
